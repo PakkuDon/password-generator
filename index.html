@@ -8,22 +8,31 @@
   </head>
   <body>
     <form>
-      <input type="text" id="result" disabled>
-      <div>
-        Options
+      <div id="password-generator-output">
+        <input type="text" id="result" disabled>
+      </div>
+      <div id="password-generator-options">
         <div>
           <label for="password-length">Password length</label>
           <input type="range" id="password-length" min="8" max="32" />
           <span id="password-length-display" />
         </div>
-        <label for="character-set-lower">Lowercase</label>
-        <input type="checkbox" name="character-sets" value="lower" id="character-set-lower" />
-        <label for="character-set-upper">Uppercase</label>
-        <input type="checkbox" name="character-sets" value="upper" id="character-set-upper" />
-        <label for="character-set-numeric">Numeric</label>
-        <input type="checkbox" name="character-sets" value="numeric" id="character-set-numeric" />
-        <label for="character-set-symbols">Symbols</label>
-        <input type="checkbox" name="character-sets" value="symbols" id="character-set-symbols" />
+        <div>
+          <label for="character-set-lower">Lowercase</label>
+          <input type="checkbox" name="character-sets" value="lower" id="character-set-lower" />
+        </div>
+        <div>
+          <label for="character-set-upper">Uppercase</label>
+          <input type="checkbox" name="character-sets" value="upper" id="character-set-upper" />
+        </div>
+        <div>
+          <label for="character-set-numeric">Numeric</label>
+          <input type="checkbox" name="character-sets" value="numeric" id="character-set-numeric" />
+        </div>
+        <div>
+          <label for="character-set-symbols">Symbols</label>
+          <input type="checkbox" name="character-sets" value="symbols" id="character-set-symbols" />
+        </div>
       </div>
       <button>Generate</button>
     </form>
