@@ -14,6 +14,11 @@ const PasswordGenerator = (() => {
   return {
     generate: (length, selectedCharsets) => {
       const availableCharSet = selectedCharsets.map((charsetName) => charsets[charsetName]).join('')
+
+      if (availableCharSet.length === 0) {
+        return ''
+      }
+
       let result = ''
 
       for (let i = 0; i < length; i++) {
