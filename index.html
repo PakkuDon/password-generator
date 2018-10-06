@@ -11,8 +11,11 @@
       <input type="text" id="result" disabled>
       <div>
         Options
-        <label for="password-length">Password length</label>
-        <input type="number" id="password-length" />
+        <div>
+          <label for="password-length">Password length</label>
+          <input type="range" id="password-length" min="8" max="32" />
+          <span id="password-length-display" />
+        </div>
         <label for="character-set-lower">Lowercase</label>
         <input type="checkbox" name="character-sets" value="lower" id="character-set-lower" />
         <label for="character-set-upper">Uppercase</label>
