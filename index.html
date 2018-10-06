@@ -9,7 +9,14 @@
   <body>
     <form>
       <input type="text" id="result" disabled>
-      <input type="number" id="password-length">
+      <div>
+        Options
+        <input type="number" id="password-length" />
+        <input type="checkbox" name="character-sets" value="lower" />
+        <input type="checkbox" name="character-sets" value="upper" />
+        <input type="checkbox" name="character-sets" value="numeric" />
+        <input type="checkbox" name="character-sets" value="symbols" />
+      </div>
       <button>Generate</button>
     </form>
     <script src="./password-generator.js"></script>
