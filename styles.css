@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   height: 100%;
@@ -5,8 +15,8 @@ body {
 
 body {
   font-family: helvetica;
-  font-size: 1.5em;
-  background: linear-gradient(150deg, #F7B555, #E55B5B);
+  font-size: 16px;
+  background: linear-gradient(180deg, #3D4E9D, #4792D2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,19 +26,26 @@ body {
 
 #root {
   flex: 1;
+  background-color: #EEE;
+  padding: 1em;
+  border-radius: 0.25em;
 }
 
 section {
-  background-color: #FFF;
-  padding: 1em;
-  border-radius: 0.25em;
-  margin: 0.5em 0;
-  box-shadow: inset 0 0 5px #000;
+  margin: 0.25em 0;
 }
 
 #result {
-  border: none;
   width: 100%;
+  font-size: 1.25em;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #BBB;
+  border-radius: 0.25em;
+}
+
+hr {
+  border: 1px solid #BBB;
 }
 
 .action {
@@ -39,8 +56,14 @@ section {
 button {
   border: none;
   cursor: pointer;
-  color: #FFF;
+  color: #111;
+  border: 1px solid #BBB;
   border-radius: 0.25em;
   padding: 0.5em 1em;
-  background: linear-gradient(150deg, #57B2F2, #2D4E9D);
+  background: #FFF;
+}
+
+button:active {
+  background-color: #FAFAFA;
+  box-shadow: inset 0 0 2px #000;
 }
