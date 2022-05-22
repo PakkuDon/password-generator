@@ -77,7 +77,7 @@ hr {
 button {
   cursor: pointer;
   color: #111;
-  border: 1px solid #2362bb;
+  border-color: transparent;
   border-radius: 0.25em;
   padding: 0.5em 1em;
   background: #4475bb;
@@ -85,9 +85,8 @@ button {
 }
 
 button:hover,
-button:active {
+button:focus {
   background: #4792D2;
-  border-color: #4475bb;
 }
 
 button:active {
