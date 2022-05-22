@@ -25,6 +25,23 @@ body {
   line-height: 1.25;
 }
 
+footer {
+  text-align: center;
+}
+
+a {
+  color: #4475bb;
+}
+
+a:hover,
+a:focus {
+  color: #4792D2;
+}
+
+a:active {
+  color: #2362bb;
+}
+
 #root {
   flex: 1;
   background-color: #EEE;
