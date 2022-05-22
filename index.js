@@ -3,6 +3,7 @@ const passwordLengthInput = document.querySelector('#password-length')
 const passwordLengthDisplay = document.querySelector('#password-length-display')
 const characterSetCheckboxes = Array.from(document.querySelectorAll('[name=character-sets]'))
 const copyButton = document.querySelector("#btn-copy")
+const defaultCopyButtonText = copyButton.textContent
 
 passwordLengthDisplay.textContent = passwordLengthInput.value
 
@@ -15,6 +16,12 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
 copyButton.addEventListener('click', () => {
   navigator.clipboard.writeText(result.value)
+    .then(() => {
+      copyButton.textContent = "Copied!"
+      setTimeout(() => {
+        copyButton.textContent = defaultCopyButtonText
+      }, 1000)
+    })
 })
 
 passwordLengthInput.addEventListener('input', (event) => {
