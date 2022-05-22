@@ -39,7 +39,6 @@ section {
   width: 100%;
   font-size: 1.25em;
   padding: 1em;
-  margin-bottom: 1em;
   border: 1px solid #BBB;
   border-radius: 0.25em;
 }
@@ -48,9 +47,13 @@ hr {
   border: 1px solid #BBB;
 }
 
-.action {
+.actions {
   padding-top: 0.5em;
   text-align: center;
+}
+
+.settings {
+  padding-top: 0.5em;
 }
 
 button {
