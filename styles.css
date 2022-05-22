@@ -66,14 +66,12 @@ hr {
 }
 
 .actions {
-  padding-top: 0.5em;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
 }
 
-.actions button {
-  margin: 0 0.2em;
-}
-
+.actions,
 .settings {
   padding-top: 0.5em;
 }
