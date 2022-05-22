@@ -2,6 +2,7 @@ const result = document.querySelector('#result')
 const passwordLengthInput = document.querySelector('#password-length')
 const passwordLengthDisplay = document.querySelector('#password-length-display')
 const characterSetCheckboxes = Array.from(document.querySelectorAll('[name=character-sets]'))
+const copyButton = document.querySelector("#btn-copy")
 
 passwordLengthDisplay.textContent = passwordLengthInput.value
 
@@ -10,6 +11,10 @@ document.querySelector('form').addEventListener('submit', (event) => {
   const passwordLength = parseInt(passwordLengthInput.value, 10)
 
   result.value = PasswordGenerator.generate(passwordLength, getSelectedCharacterSets())
+})
+
+copyButton.addEventListener('click', () => {
+  navigator.clipboard.writeText(result.value)
 })
 
 passwordLengthInput.addEventListener('input', (event) => {
