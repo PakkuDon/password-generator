@@ -7,6 +7,8 @@ const defaultCopyButtonText = copyButton.textContent
 
 passwordLengthDisplay.textContent = passwordLengthInput.value
 
+let confirmationMessageTimeoutId
+
 document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault()
   const passwordLength = parseInt(passwordLengthInput.value, 10)
@@ -18,7 +20,8 @@ copyButton.addEventListener('click', () => {
   navigator.clipboard.writeText(result.value)
     .then(() => {
       copyButton.textContent = "Copied!"
-      setTimeout(() => {
+      clearTimeout(confirmationMessageTimeoutId)
+      confirmationMessageTimeoutId = setTimeout(() => {
         copyButton.textContent = defaultCopyButtonText
       }, 1000)
     })
